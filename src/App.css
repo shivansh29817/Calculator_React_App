@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.calculator {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  width: 320px;
+  max-width: 100%;
+}
+
+.calculator-display {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: right;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.display-value {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 300;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.calculator-keypad {
+  display: flex;
+  gap: 10px;
+}
+
+.input-keys {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 3;
+}
+
+.function-keys {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.digit-keys {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.key-0 {
+  grid-column: span 2;
+}
+
+.operator-keys {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.calculator-key {
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  outline: none;
+}
+
+/* Number keys */
+.digit-keys .calculator-key,
+.key-dot {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.digit-keys .calculator-key:hover,
+.key-dot:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.digit-keys .calculator-key:active,
+.key-dot:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Function keys (AC, ±, %) */
+.function-keys .calculator-key {
+  background: rgba(255, 255, 255, 0.7);
+  color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.function-keys .calculator-key:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.function-keys .calculator-key:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Operator keys */
+.operator-keys .calculator-key {
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.operator-keys .calculator-key:hover {
+  background: linear-gradient(135deg, #ff5252, #ff7979);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+.operator-keys .calculator-key:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(255, 107, 107, 0.2);
+}
+
+/* Equals key special styling */
+.key-equals {
+  background: linear-gradient(135deg, #4ecdc4, #44a08d) !important;
+  box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3) !important;
+}
+
+.key-equals:hover {
+  background: linear-gradient(135deg, #45b7aa, #3d8b7a) !important;
+  box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4) !important;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .calculator {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+  }
+  
+  .app-wrapper{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    
+
+  }
+
+
+  .display-value {
+    font-size: 2rem;
+    min-height: 50px;
+  }
+  
+  .calculator-key {
+    height: 50px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .display-value {
+    font-size: 1.8rem;
+  }
+  
+  .calculator-key {
+    height: 45px;
+    font-size: 0.9rem;
+  }
+}
+.gradient-text {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(270deg, #00c9ff, #92fe9d, #fcb045, #fd1d1d);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
