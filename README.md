@@ -41,8 +41,8 @@ Welcome to the **Calculator React App**! 🎉 This is a sleek, responsive calcul
 
 ## 🚀 Demo
 
-![Calculator Preview](![{5F5FB3F3-B785-4999-84C3-AFEC3764C5F7}](https://github.com/user-attachments/assets/b33b01de-922d-429d-9320-cc8a857d3251)
-)
+![Calculator Preview ![{5F5FB3F3-B785-4999-84C3-AFEC3764C5F7}](https://github.com/user-attachments/assets/6aa85b2d-ac28-48f7-82c4-2c90ef0de189)
+
 
 *The calculator features a modern glassmorphism design with smooth animations and intuitive controls.*
 
